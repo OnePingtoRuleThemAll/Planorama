@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS blog_db;
+DROP DATABASE IF EXISTS planorama_db;
 
 
-CREATE DATABASE blog_db;
+CREATE DATABASE plannorama_db;
