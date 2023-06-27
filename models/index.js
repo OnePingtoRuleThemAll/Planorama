@@ -2,6 +2,8 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
+//TODO: Datbase relationships need to be created
+/*
 
 User.hasMany(Post, {
     foreignKey: 'user_id',
@@ -32,7 +34,8 @@ Comment.belongsTo(Post, {
     foreignKey: 'post_id',
     onDelete: 'CASCADE'
 });
+*/
 
 
 
-module.exports = {User, Post, Comment};
+module.exports = {User, Event};

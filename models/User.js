@@ -18,7 +18,23 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name:{
+        username:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        firstName: {
+            type: DataTransfer.STRING,
+            allowNull: false,
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        birthday: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        twitter: { 
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -35,9 +51,9 @@ User.init(
             allowNull: false,
             validate: {
                 len: [5],
-            },
+            }
 
-        },
+        }
     },
     {
         hooks:{
