@@ -6,33 +6,35 @@
     <title>Profile</title>
 </head> 
 <body>
-        <h1>My Profile</h1>
+        <h2>My Profile</h2>
 <div class="profile-card">
 <p>
-Name: {{name}}
+Name: {{user.firstName}} {{user.lastName}}
 </p>
 <p>
-Twitter: {{twitter}}
+Birthday: {{user.birthday}}    
 </p>
 <p>
-Email: {{email}}
+Twitter: {{user.twitter}}
 </p>
 <p>
-Hobbies: {{hobbies}}
+Email: {{user.email}}
+</p>
+<p>
+Hobbies: {{user.hobbies}}
 </p>
 </div>
 
 <div class="event-card">
-    <h2>My Events</h2>
+    <h3>My Events</h3>
 {{#each events as |event|}}
     <div>
         <h3>{{event.title}}</h3>
-        <p>{{event.description}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.location}}</p>
-        <p>{{event.privacy}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.created}}</p>
+        <p>{{event.body}}</p>
+        <p>{{event.eventLocation}}</p>
+        <p>{{event.isPrivate}}</p>
+        <p>{{event.event_date}}</p>
+        <p>{{event.date_created}}</p>
     </div>
 {{/each}}
 
