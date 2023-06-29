@@ -1,14 +1,13 @@
-{{#if posts.length}}
+{{#if events.length}}
 <section>
-  <h2>Your Posts</h2>
-    {{#each posts as |post|}}
-      {{> dashPostInfo post}}
+  <h2>Local Events</h2>
+    {{#each events as |event|}}
+      {{> eventPostInfo event}}
  
     {{/each}}
 
 </section>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">New Post</a></button>
 
 <script src=""></script>

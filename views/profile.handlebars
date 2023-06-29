@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head> 
+<body>
+        <h1>My Profile</h1>
+<div class="profile-card">
+<p>
+Name: {{name}}
+</p>
+<p>
+Twitter: {{twitter}}
+</p>
+<p>
+Email: {{email}}
+</p>
+<p>
+Hobbies: {{hobbies}}
+</p>
+</div>
+
+<div class="event-card">
+    <h2>My Events</h2>
+{{#each events as |event|}}
+    <div>
+        <h3>{{event.title}}</h3>
+        <p>{{event.description}}</p>
+        <p>{{event.date}}</p>
+        <p>{{event.location}}</p>
+        <p>{{event.privacy}}</p>
+        <p>{{event.date}}</p>
+        <p>{{event.created}}</p>
+    </div>
+{{/each}}
+
+<div class="events-attended">
+    <h3>Events Attended</h3>
+    <ol>
+        {{#each eventsAttended as |event|}}
+        <li>{{event.title}}</li>
+        {{/each}}
+    </ol>
+</div>
+
+<div class="events-created">
+    <h3>My Events Created</h3>
+    <ol>
+        {{#each eventsCreated as |event|}}
+        <li>{{event.title}}</li>
+        {{/each}}
+    </ol>
+</div>
+
+</body>
