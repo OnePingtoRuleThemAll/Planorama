@@ -36,8 +36,22 @@ Hobbies: {{hobbies}}
     </div>
 {{/each}}
 
-
-
-
+<div class="events-attended">
+    <h3>Events Attended</h3>
+    <ol>
+        {{#each eventsAttended as |event|}}
+        <li>{{event.title}}</li>
+        {{/each}}
+    </ol>
 </div>
+
+<div class="events-created">
+    <h3>My Events Created</h3>
+    <ol>
+        {{#each eventsCreated as |event|}}
+        <li>{{event.title}}</li>
+        {{/each}}
+    </ol>
+</div>
+
 </body>
