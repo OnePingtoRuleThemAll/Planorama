@@ -24,7 +24,7 @@ Email: {{user.email}}
 Hobbies: {{user.hobbies}}
 </p>
 </div>
-
+{{#if events.length}}
 <div class="event-card">
     <h3>My Events</h3>
 {{#each events as |event|}}
@@ -32,14 +32,15 @@ Hobbies: {{user.hobbies}}
         <h3>{{event.title}}</h3>
         <p>{{event.body}}</p>
         <p>{{event.eventLocation}}</p>
+        <p>{{event.locationCoordinates}}</p>
         <p>{{event.isPrivate}}</p>
         <p>{{event.updatedEvent}}</p>
         <p>{{event.event_date}}</p>
         <p>{{event.date_created}}</p>
     </div>
 {{/each}}
-
-<div class="events-attended">
+{{/if}}
+<!--<div class="events-attended">
     <h3>Events Attended</h3>
     <ol>
         {{#each eventsAttended as |event|}}
@@ -55,6 +56,6 @@ Hobbies: {{user.hobbies}}
         <li>{{event.title}}</li>
         {{/each}}
     </ol>
-</div>
+</div> -->
 
 </body>
