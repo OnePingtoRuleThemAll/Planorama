@@ -1,0 +1,17 @@
+<div class="text-center">
+    <h2>{{event.title}}</h2>
+    <p>{{event.body}}</p>
+    <p>{{event.eventLocation}}</p>
+    <p>{{event.isPrivate}}</p>
+    <p>{{event.updatedEvent}}</p>
+    <p>{{event.event_date}}</p>
+    <p>{{event.date_created}}</p>
+    <p>Created by {{user.firstName}} {{user.lastName}} on {{event.date_created}}</p>
+    {{#if logged_in}}
+    <p>
+        <button class="btn btn-primary">Add to My Events!</button>
+    </p>
+    {{else}}
+    <a href="/signUpPage.handlebars">Sign up to add this event!</a>
+    {{/if}}
+</div>
