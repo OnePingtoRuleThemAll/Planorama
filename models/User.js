@@ -23,7 +23,7 @@ User.init(
             allowNull: false,
         },
         firstName: {
-            type: DataTransfer.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         lastName: {
