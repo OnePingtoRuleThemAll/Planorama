@@ -33,7 +33,7 @@ Post.init(
         },
         //Adds event location data type using coordinates
         locationCoordinates: {
-            Type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
 
