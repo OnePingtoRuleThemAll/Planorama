@@ -1,3 +1,3 @@
 DROP DATABASE IF EXISTS planorama_db;
 
-CREATE DATABASE plannorama_db;
+CREATE DATABASE planorama_db;
