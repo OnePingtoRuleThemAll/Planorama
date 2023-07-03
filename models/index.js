@@ -32,11 +32,11 @@ Comment.belongsTo(Post, {
 
 */
 
-
 Event.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
+
 
 
 module.exports = {User, Event};
