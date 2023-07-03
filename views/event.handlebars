@@ -1,12 +1,12 @@
 <div class="text-center">
-    <h2>{{event.title}}</h2>
-    <p>{{event.body}}</p>
-    <p>{{event.eventLocation}}</p>
-    <p>{{event.locationCoordinates}}</p>
-    <p>{{event.isPrivate}}</p>
-    <p>{{event.updatedEvent}}</p>
-    <p>{{event.event_date}}</p>
-    <p>{{event.date_created}}</p>
+    <h2 id="event-name">{{event.title}}</h2>
+    <p id="event-desc">{{event.body}}</p>
+    <p id="ev-loc">{{event.eventLocation}}</p>
+    <p id="loc-coor">{{event.locationCoordinates}}</p>
+    <p id="is-priv">{{event.isPrivate}}</p>
+  <!--  <p id="is-updated">{{event.updatedEvent}}</p> -->
+    <p id="event-date">{{event.event_date}}</p>
+    <p id="date-created">{{event.date_created}}</p>
     <p>Created by {{user.firstName}} {{user.lastName}} on {{event.date_created}}</p>
     {{#if logged_in}}
     <p>
@@ -19,3 +19,4 @@
     <a href="/signUpPage.handlebars">Sign up to add this event!</a>
     {{/if}}
 </div>
+<script src="./js/events.js"></script>
