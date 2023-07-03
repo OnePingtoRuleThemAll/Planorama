@@ -32,8 +32,7 @@ For future development we would like to be able to implement a few things:
 4. Open the app configuration file ('config.js') and enter your API credentials.
 <!--insert image here-->
 
-5. Build and run the app
-<!--insert image here-->
+5. Start the app: 'npm start'
 
 6. Access the app in your web browser by navigating to <!--insert localhost-->
 
@@ -52,6 +51,8 @@ Contributions to the Planorama App are welcome! If you would like to contribute,
 4. Push your changes to your forked repository.
 5. Submit a pull request with a detailed description of your changes. 
 
+## Acknowledgements
+Planorama was inspired by all four of our group members. We would like to thank the open-source community for their immensely invaluable contributions, as well as all class lessons and provided documentation. We relied heavily on our TA's and instructors during this project. 
 ## Licesnse
 The Planorama App is released under the MIT License
 
