@@ -1,13 +1,13 @@
 <div class="text-center">
-    <h2>{{event.title}}</h2>
-    <p>{{event.body}}</p>
-    <p>{{event.eventLocation}}</p>
-    <p>{{event.locationCoordinates}}</p>
-    <p>{{event.isPrivate}}</p>
-    <p>{{event.updatedEvent}}</p>
-    <p>{{event.event_date}}</p>
-    <p>{{event.date_created}}</p>
-    <p>Created by {{user.firstName}} {{user.lastName}} on {{event.date_created}}</p>
+    <h2>{{title}}</h2>
+    <p>{{body}}</p>
+    <p>{{eventLocation}}</p>
+    <p>{{locationCoordinates}}</p>
+    <p>{{isPrivate}}</p>
+    <p>{{updatedEvent}}</p>
+    <p>{{event_date}}</p>
+    <p>{{date_created}}</p>
+    <p>Created by {{user.usernmae}} {{user.lastName}} on {{date_created}}</p>
     {{#if logged_in}}
     <p>
         <button class="btn btn-primary">Add to My Events!</button>
@@ -16,6 +16,6 @@
         <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
     </div>
     {{else}}
-    <a href="/signUpPage.handlebars">Sign up to add this event!</a>
+    <a href="/signUpPage">Sign up to add this event!</a>
     {{/if}}
 </div>
