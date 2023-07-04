@@ -43,3 +43,6 @@ const delButtonHandler = async (event) => {
     };
     document.querySelector('.text-center').addEventListener('click', delButtonHandler);
    document.querySelector('.new-event-form').addEventListener('submit', newFormHandler);
+
+
+   // Initialize and add the map
