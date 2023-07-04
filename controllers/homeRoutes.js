@@ -74,6 +74,20 @@ router.get('/profile', withAuth, async (req, res) => {
     }
   });
 
+  // Use withAuth middleware to prevent access to route
+router.get('/newPost', withAuth, async (req, res) => {
+  try {
+    
+    //res.render('newPostPage');
+
+    res.render('newPostPage', {
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.get('/login', (req, res) => { 
     // If the user is already logged in, redirect the request to another route
