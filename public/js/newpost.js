@@ -1,10 +1,12 @@
 const newpostFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#event-name').ariaValueMax.trim();
-    const description = document.querySelector('#event-desc').ariaValueMax.trim();
+    const name = document.querySelector('#event-name').value.trim();
+    const location = document.querySelector('#event-name').value.trim();
+    const eventDate = document.querySelector('#event-name').value.trim();
+    const description = document.querySelector('#event-desc').value.trim();
 
-    if (name && description) {
+    if (name && location && eventDate && description) {
         const response = await fetch('/api/events', {
             method: 'POST',
             body: JSON.stringify({ name, description}),
