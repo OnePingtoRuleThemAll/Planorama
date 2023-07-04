@@ -1,26 +1,45 @@
-newPostPage.handlebars
-<div class="card">
-    <h3 class="card-header">Create New Post</h3>
-    <form class="card-body new-post-form" id="new-post-form">
-        <label for="post-title" class="form-label">Title</label>
-        <input type="text" id="post-title" name="post-title" class="form-input" />
+<div class="row mt-4">
+    <div class="col-md-6">
+         <h3 class="card-header">Create New Post</h3>
 
-
-        <label class="form-label" for="content">Content</label>
-        <input id="content" name="content" class="form-input"/>
-            <div class="text-center">
-                <h2>{{name}}</h2>
-                <p>{{description}}</p>
-                <p>Created by {{user.name}} on {{date_created}}</p>
-                <p>
-                    
-                </p>
+        <form class="card-body new-post-form">
+            <div class="form-group">
+                <label for="post-title">Post Title:</label>
+                <input class="form-input" type="text" id="post-title" name="post-title"/>
             </div>
 
-        <button type="submit" class="btn">Create</button>
+            <div class="form-group">
+                <label for="event-description">Event Description: </label>
+                <input class="form-input" type="text" name="event-description"/>
+            </div>
+
+            <div class="form-group">
+                <label for="event-location">Location:</label>
+                <input class="form-input" type="text" name="event-location"/>
+            </div>
+          
+          <div class="form-group">
+            <label for="event-date">Date of Event:</label>
+            <input class="form-input" type="number" name="event-date"/>
+          </div>
+            <button type="submit" class="btn">Creat Event!</button>
+        </div>  
     </form>
 </div>
 
+{{#if event.length}}
+<div class="row mb-3">
+    <h3>Current Events:</h3>
+    {{#each event as |event|}}
+        <div class="row mb-3">
+            <div class="col-md-8">
+                <h4><a href="/event/{{event.id}}">{{event.name}}</a></h4>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+        {{/if}}
+        </div>
 
 
-<script src=""></script>
+<script src="./js/newpost.js"></script>
