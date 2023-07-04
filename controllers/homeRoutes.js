@@ -35,7 +35,7 @@ router.get('/event/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['username','firstName', 'lastName'],
         },
       ],
     });
