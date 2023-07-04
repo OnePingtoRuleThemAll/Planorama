@@ -1,4 +1,5 @@
 <div class="text-center">
+
     <h2 id="event-name">{{event.title}}</h2>
     <p id="event-desc">{{event.body}}</p>
     <p id="ev-loc">{{event.eventLocation}}</p>
@@ -16,7 +17,7 @@
         <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
     </div>
     {{else}}
-    <a href="/signUpPage.handlebars">Sign up to add this event!</a>
+    <a href="/signUpPage">Sign up to add this event!</a>
     {{/if}}
 </div>
 <script src="./js/events.js"></script>

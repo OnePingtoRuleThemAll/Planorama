@@ -10,7 +10,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./public/css/style.css" />
+     <link rel="stylesheet" href="/css/jass.css">
+     <link rel="stylesheet" href="/css/style.css">
   <title>Planorama</title>
 </head>
 
@@ -23,22 +24,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+       
+        {{#if logged_in}}
+        
         <li class="nav-item">
-          <a class="nav-link" href="./signUpPage.handlebars">Sign Up</a>
-        </li>
-        {{#if loggedIn}}
-        <li class="nav-item">
-          <a class="nav-link" href="./js/logout.js">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./profile.handlebars">Profile</a>
+          <a class="nav-link" href="" id="logout">Logout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./createEvent.handlebars">Create New Event</a>
+          <a class="nav-link" href="./profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./createEvent">Create New Event</a>
         </li>
         {{else}}
        <li class="nav-item">
-          <a class="nav-link" href="./js/login.js">Login</a>
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/signUpPage">Sign Up</a>
         </li>
         {{/if}}
       </ul>
@@ -51,28 +54,9 @@
 </header>
 
 <main>
-{{#each events as |event| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <a href="/event/{{event.id}}">{{event.title}}</a>
-    </h2>
-    <p>
-     {{event.eventLocation}}
-    </p>
-    <P>
-      {{event.locationCoordinates}}
-    </P>
-    <p>{{event.event_date}}</p>
-    <p>Created by {{user.firstName}} {{user.lastName}} on {{event.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{event.body}}
-    </p>
-  </div>
-</div>
-{{/each}}
+
+
+{{{ body }}}
 </main>
 
 <script

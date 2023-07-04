@@ -1,0 +1,22 @@
+{{#each events as |event| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <a href="/event/{{event.id}}">{{event.title}}</a>
+    </h2>
+    <p>
+     {{event.eventLocation}}
+    </p>
+    <P>
+      {{event.locationCoordinates}}
+    </P>
+    <p>{{event.event_date}}</p>
+    <p>Created by {{user.firstName}} {{user.lastName}} on {{event.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{event.body}}
+    </p>
+  </div>
+</div>
+{{/each}}
