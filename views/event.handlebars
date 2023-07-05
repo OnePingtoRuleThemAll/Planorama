@@ -1,24 +1,63 @@
-<div class="text-center">
-    
 
-    <h2 id="event-name">{{title}}</h2>
-    <p id="event-desc">{{body}}</p>
-    <p id="ev-loc">{{eventLocation}}</p>
-    <p id="loc-coor">{{locationCoordinates}}</p>
-    <p id="is-priv">{{isPrivate}}</p>
-  <!--  <p id="is-updated">{{event.updatedEvent}}</p> -->
-    <p id="event-date">{{format_date2 event_date}}</p>
-    <p id="date-created">{{format_date2 date_created}}</p>
-    <p>Created by {{event.user.username}} on {{format_date2 date_created}}</p>
-    {{#if logged_in}}
-    <p>
-        <button class="btn btn-primary">Add to My Events!</button>
-    </p>
-    <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+	<script type='text/javascript'>
+    function GetMap() {
+        var map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AgztHx8rlO0Qx58HLhV5ADFbJqHIIjkbzPXkVI3HEnLIJv9MTCVZCMYWNA1UDjTN',
+            center: new Microsoft.Maps.Location({{locationCoordinates}})
+        });
+
+        var center = map.getCenter();
+
+        //Create custom Pushpin
+        var pin = new Microsoft.Maps.Pushpin(center, {
+            title: '{{title}}',
+            
+            text: '1'
+        });
+
+        //Add the pushpin to the map
+        map.entities.push(pin);
+    }
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+</head>
+
+<section class="section-container">
+    <div class ="container">
+        <div class = "text-left">
+            <h2 id="event-name">{{title}}</h2>
+            <p id="event-desc">{{body}}</p>
+            <p id="ev-loc">{{eventLocation}}</p>
+            <p id="loc-coor">{{locationCoordinates}}</p>
+            <p id="is-priv">{{isPrivate}}</p>
+            <!--  <p id="is-updated">{{event.updatedEvent}}</p> -->
+            <p id="event-date">{{format_date2 event_date}}</p>
+            <p id="date-created">{{format_date2 date_created}}</p>
+            <p>Created by {{event.user.username}} on {{format_date2 date_created}}</p>
+            {{#if logged_in}}
+            <p>
+            <button class="btn btn-primary">Add to My Events!</button>
+            </p>
+            <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
+        </div>
+        {{else}}
+        <a href="/signUpPage">Sign up to add this event!</a>
+        {{/if}}
+        </div>
+        <div class = "map-container">
+            <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+        </div>
     </div>
-    {{else}}
-    <a href="/signUpPage">Sign up to add this event!</a>
-    {{/if}}
-</div>
+</section>
+
+
+
+
+
 <script src="./js/events.js"></script>
+

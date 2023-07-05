@@ -41,8 +41,7 @@ const delButtonHandler = async (event) => {
         }
     }
     };
-    document.querySelector('.btn-danger').addEventListener('click', delButtonHandler);
-   document.querySelector('.new-event-form').addEventListener('submit', newFormHandler);
+document.querySelector('.btn-danger').addEventListener('click', delButtonHandler);
+document.querySelector('.new-event-form').addEventListener('submit', newFormHandler);
 
 
-   // Initialize and add the map

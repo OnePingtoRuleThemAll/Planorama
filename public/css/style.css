@@ -23,3 +23,18 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+.container {
+  display: flex;
+}
+
+.text-left {
+  flex: 1;
+}
+
+.map-container {
+  flex: 1;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+.section-container {
+  margin-top: 20px;
+}
