@@ -5,17 +5,19 @@
       <a href="/event/{{event.id}}">{{event.title}}</a>
     </h2>
     <p>
-     {{event.eventLocation}}
+      Event location: {{event.eventLocation}}
     </p>
     <P>
-      {{event.locationCoordinates}}
+      Event coordinates: {{event.locationCoordinates}}
     </P>
-    <p>{{event.event_date}}</p>
+    <p>
+      Date of event: {{event.event_date}}
+    </p>
     <p>Created by {{event.user.username}} on {{event.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      {{event.body}}
+      Event description: {{event.body}}
     </p>
   </div>
 </div>
