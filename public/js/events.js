@@ -12,7 +12,7 @@ const newFormHandler = async (event) => {
     if (name && body && location && coordinates && privacy && date && created) {
         const response = await fetch(`/api/events`, {
         method: 'POST',
-        body: JSON.stringify({ name, body, location, coordinates, privacy, date, created }),
+        body: JSON.stringify({title , body, location, coordinates, privacy, date, created }),
         headers: {
             'Content-Type': 'application/json',
         },
