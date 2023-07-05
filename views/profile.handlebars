@@ -6,10 +6,13 @@
     <title>Profile</title>
 </head> 
 <body>
-        <h1>My Profile</h1>
-<div class="profile-card">
+<div class="profile-card"> 
+        <h2>My Profile</h2>
 <p>
-Name: {{name}}
+Name: {{firstName}} {{lastName}}
+</p>
+<p>
+Birthday: {{birthday}}    
 </p>
 <p>
 Twitter: {{twitter}}
@@ -21,22 +24,26 @@ Email: {{email}}
 Hobbies: {{hobbies}}
 </p>
 </div>
-
+{{#if events.length}}
 <div class="event-card">
-    <h2>My Events</h2>
+    <h3>My Events</h3>
 {{#each events as |event|}}
     <div>
         <h3>{{event.title}}</h3>
-        <p>{{event.description}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.location}}</p>
-        <p>{{event.privacy}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.created}}</p>
+        <p>{{event.body}}</p>
+        <p>{{event.eventLocation}}</p>
+        <p>{{event.locationCoordinates}}</p>
+        <p>{{event.isPrivate}}</p>
+      <!--  <p>{{event.updatedEvent}}</p> -->
+        <p>{{event.event_date}}</p>
+        <p>{{event.date_created}}</p>
+    </div>
+     <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
     </div>
 {{/each}}
-
-<div class="events-attended">
+{{/if}}
+<!--<div class="events-attended">
     <h3>Events Attended</h3>
     <ol>
         {{#each eventsAttended as |event|}}
@@ -52,6 +59,6 @@ Hobbies: {{hobbies}}
         <li>{{event.title}}</li>
         {{/each}}
     </ol>
-</div>
-
+</div> -->
+<script src="./js/events.js"></script>
 </body>

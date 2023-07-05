@@ -1,15 +1,31 @@
-    <div class="card">
-      <h3 class="card-header">Sign Up</h3>
-      <form id="signup-form" class="card-body">
-        <label for="username-signup" class="form-label">Username</label>
-        <input id="username-signup" type="text" class="form-input" />
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="card-header">Sign Up!</h3>
 
+      <form class="signup-form">
+          <div class="form-group">
+            <label for="username-signup" class="form-label">Username</label>
+            <input id="username-signup" type="text" class="form-input"/>
+          </div>
 
-        <label class="form-label" for="password-signup">Password</label>
-        <input  id="password-signup" type="password" class="form-input" />
+          <div class="form-group">
+            <label class="password-label" for="password-signup">Password</label>
+            <input  id="password-signup" type="password" class="form-input"/>
+          </div>
+      
+          <div class="form-group">
+            <label class="user-birthday" for="form-label">Birthday</label>
+            <input id="user-birthday" type="birthday" class="form-input"/>
+          </div>
 
+          <div class="form-group">
+            <label class="hobbies" for="form-label">Hobbies</label>
+            <input id="user-hobbie" type="hobbies" class="form-input"/>
+          </div>
+      
+      
         <button type="submit" class="btn">Signup!</button>
-        <a class="login-link" href="/login">Log in instead</a>
+        <a class="login-link" href="/login">Login</a>
       </form>
     </div>
 

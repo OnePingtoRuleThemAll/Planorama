@@ -1,0 +1,47 @@
+[
+  {
+      "title": "Inspiring Quotes",
+      "body": "Here are some inspiring quotes to brighten your day. Believe you can and you\"re halfway there.",
+      "event_date": "2023-09-28 07: 36: 59",
+      "eventLocation": "6550 Comanche Trl, Austin, TX 78732",
+      "locationCoordinates": "30.393926,-97.878633",
+      "isPrivate": false,
+      "user_id": 1
+  },
+  {
+      "title": "Amazing Journey",
+      "body": "Today, I embarked on an amazing journey. The sights and sounds were awe-inspiring. I couldnt have asked for a better adventure.",
+      "event_date": "2023-04-10 23: 45: 12",
+      "eventLocation": "5501 N Lamar Blvd Ste A105, Austin, TX 78751",
+      "locationCoordinates": "30.313019,-97.739430",
+      "isPrivate": false,
+      "user_id": 2
+  },
+  {
+      "title": "First Post",
+      "body": "This is the first sentence of the second sentence. Finally, the third sentence concludes the",
+      "event_date": "2023-01-15 09: 27: 45",
+      "eventLocation": "500 E Cesar Chavez St, Austin, TX 78701",
+      "locationCoordinates": "30.263293,-97.739761",
+      "isPrivate": false,
+      "user_id": 3
+  },
+  {
+      "title": "Exploring Nature",
+      "body": "Spent the day exploring the beautiful natural landscapes. The lush green forests were a sight to behold. The calming sound of the nearby waterfall made it a truly memorable experience.",
+      "event_date": "2023-06-05 14: 53: 21",
+      "eventLocation": "650 S Griffin St, Dallas, TX 75202",
+      "locationCoordinates": "32.774899,-96.800184",
+      "isPrivate": false,
+      "user_id": 4
+  },
+  {
+      "title": "New Recipe",
+      "body": "Just discovered a delicious recipe. The combination of flavors is simply delightful. I highly recommend giving it a try!",
+      "event_date": "2023-03-19 18: 02: 10",
+      "eventLocation": "Lady Bird Lake, Lady Bird Lake, Austin, TX 78701",
+      "locationCoordinates": "30.265868,-97.763803",
+      "isPrivate": false,
+      "user_id": 5
+  }
+]
