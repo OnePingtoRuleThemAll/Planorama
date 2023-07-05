@@ -1,7 +1,7 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#event-name').value.trim();
+    const title = document.querySelector('#event-name').value.trim();
     const body = document.querySelector('#event-desc').value.trim();
     const location = document.querySelector('#ev-loc').value.trim();
     const coordinates = document.querySelector('#loc-coor').value.trim();
@@ -35,13 +35,13 @@ const delButtonHandler = async (event) => {
         });
     
         if (response.ok) {
-        document.location.replace('/events');
+        document.location.reload();
         } else {
         alert('Failed to delete event');
         }
     }
     };
-    document.querySelector('.text-center').addEventListener('click', delButtonHandler);
+    document.querySelector('.btn-danger').addEventListener('click', delButtonHandler);
    document.querySelector('.new-event-form').addEventListener('submit', newFormHandler);
 
 
