@@ -1,15 +1,19 @@
 const newpostFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#event-name').value.trim();
-    const location = document.querySelector('#event-name').value.trim();
-    const eventDate = document.querySelector('#event-name').value.trim();
-    const description = document.querySelector('#event-desc').value.trim();
-
-    if (name && location && eventDate && description) {
+    const title = document.querySelector('#event-title').value.trim();
+    const body = document.querySelector('#event-description').value.trim();
+    const event_date = document.querySelector('#event-date').value.trim();
+    const eventLocation = document.querySelector('#event-location').value.trim();
+    const locationCoordinates = document.querySelector('#location-coordinates').value.trim();
+    const isPrivate = document.querySelector('#event-privacy').value.trim();
+   
+   
+    
+    if (title && body && event_date && eventLocation && locationCoordinates && isPrivate) {
         const response = await fetch('/api/events', {
             method: 'POST',
-            body: JSON.stringify({ name, description}),
+            body: JSON.stringify({ title, body, event_date, eventLocation, locationCoordinates, isPrivate}),
             headers: {
                 'Content-Type': 'application/json',
             }, 

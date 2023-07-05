@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -26,6 +26,7 @@ body {
  */
 main {
   display: block;
+  margin-left: 15px;
 }
 
 /**
@@ -35,6 +36,8 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  text-align: center;
+  background-color: lightblue;
 }
 
 /* Grouping content
@@ -372,15 +375,17 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.75rem;
 }
 
 h2 {
   font-size: 2rem;
+  text-decoration: underline;
 }
 
 h3 {
   font-size: 1.75rem;
+  text-decoration: underline;
 }
 
 h4 {
@@ -420,7 +425,7 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #0804ff;
   text-decoration: none;
 }
 
@@ -1009,7 +1014,7 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: #588fc9;
   color: #d9e9e8;
 }
 
@@ -1252,7 +1257,7 @@ form [type='radio'] {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -15px;
+  margin-left: -1px;
   margin-right: -15px;
 }
 
@@ -1443,7 +1448,6 @@ form [type='radio'] {
   }
   .col-md-4 {
     flex: 0 0 33.33333%;
-    max-width: 33.33333%;
   }
   .col-md-5 {
     flex: 0 0 41.66667%;

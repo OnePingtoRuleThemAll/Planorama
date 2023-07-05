@@ -25,14 +25,18 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#name-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+  const twitter = document.querySelector('#twitter-signup').value.trim();
+  const birthday = document.querySelector('#birthday-signup').value.trim();
+  const firstName = document.querySelector('#firstName-signup').value.trim();
+  const lastName = document.querySelector('#lastName-signup').value.trim();
   
-    if (name && email && password) {
+    if (username && firstName && lastName && email &&  birthday && twitter && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ username, firstName, lastName, birthday, twitter, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
