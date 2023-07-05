@@ -44,15 +44,15 @@ Event.init(
             defaultValue: false,
         },
 
-        updatedEvent: {
+      //  updatedEvent: {
             //Stores the timestamp of when a record was last updated
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
+       //     type: DataTypes.DATE,
+       //     allowNull: false,
+      //      defaultValue: DataTypes.NOW,
+       // },
 
         date_created: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
