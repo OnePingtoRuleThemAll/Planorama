@@ -30,13 +30,13 @@ Hobbies: {{hobbies}}
 {{#each events as |event|}}
     <div>
         <h4>{{event.title}}</h4>
-        <p>{{event.body}}</p>
-        <p>{{event.eventLocation}}</p>
-        <p>{{event.locationCoordinates}}</p>
-        <p>{{event.isPrivate}}</p>
+        <p>Description:{{event.body}}</p>
+        <p>Event location:{{event.eventLocation}}</p>
+        <p>Event coordinates:{{event.locationCoordinates}}</p>
+        <p>Event is private:{{event.isPrivate}}</p>
       <!--  <p>{{event.updatedEvent}}</p> -->
-        <p>{{event.event_date}}</p>
-        <p>{{event.date_created}}</p>
+        <p>Event date:{{event.event_date}}</p>
+        <p>Date created:{{event.date_created}}</p>
     </div>
      <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
