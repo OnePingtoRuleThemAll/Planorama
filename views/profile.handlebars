@@ -20,16 +20,16 @@ Twitter: {{twitter}}
 <p>
 Email: {{email}}
 </p>
-<p>
+<!--<p>
 Hobbies: {{hobbies}}
-</p>
+</p> -->
 </div>
 {{#if events.length}}
 <div class="event-card">
     <h3>My Events</h3>
 {{#each events as |event|}}
     <div>
-        <h3>{{event.title}}</h3>
+        <h4>{{event.title}}</h4>
         <p>{{event.body}}</p>
         <p>{{event.eventLocation}}</p>
         <p>{{event.locationCoordinates}}</p>
