@@ -15,10 +15,11 @@
   
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
-  
+<!-- Title of the page -->  
   <title>Planorama</title>
 </head>
 
+<!-- Navbar -->
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -30,7 +31,7 @@
       <ul class="navbar-nav">
        
         {{#if logged_in}}
-        
+   <!-- These navbar links only appear if logged in -->     
         <li class="nav-item">
           <a class="nav-link" id="logout">Logout</a>
         </li>
@@ -41,6 +42,7 @@
           <a class="nav-link" href="/newPost">Create New Event</a>
         </li>
         {{else}}
+        <!-- These navbar links only appear if not logged in -->
        <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
         </li>
@@ -52,14 +54,13 @@
     </div>
   </div>
 </nav>
-
+<!-- Header -->
 <header>
     <h1 class="app-title"><i class="fab"></i>Planorama</h1>
 </header>
 
 <main>
-
-
+<!-- Body -->
 {{{ body }}}
 </main>
 

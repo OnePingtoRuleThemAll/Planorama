@@ -1,3 +1,5 @@
+// Gathers all the information for the new event form 
+
 const newpostFormHandler = async (event) => {
     event.preventDefault();
 
@@ -26,6 +28,7 @@ const newpostFormHandler = async (event) => {
        //     alert('Failed to create event');
        // }
     }
+// The delete button is no longer on the page, but that is for future development
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
