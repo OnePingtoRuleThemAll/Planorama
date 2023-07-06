@@ -1,10 +1,14 @@
+/**
+This file defines the relationships between the User and Event models.
+It exports the User and Event models along with their associations.
+*/
 const User = require('./User');
 
 const Event = require('./Event');
 
-//TODO: Datbase relationships need to be created
 
 
+// User has a one-to-many relationship with Event
 User.hasMany(Event, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
@@ -12,7 +16,7 @@ User.hasMany(Event, {
 });
 
 
-
+// Event belongs to User
 Event.belongsTo(User, {
     foreignKey: 'user_id',
 
