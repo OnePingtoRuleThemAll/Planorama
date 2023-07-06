@@ -1,3 +1,5 @@
+//Event Model
+//Represents an event in the application.
 const {Model, DataTypes} =  require('sequelize');
 
 const sequelize = require('../config/connection');

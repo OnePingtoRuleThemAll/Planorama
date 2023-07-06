@@ -3,6 +3,7 @@ const router = require('express').Router();
 const { Event } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//route to create a events
 router.post('/', withAuth, async (req,res) => {
     const body = req.body;
     try{
@@ -17,6 +18,7 @@ router.post('/', withAuth, async (req,res) => {
     }
 });
 
+//route to delete a events
 router.delete('/:id', withAuth, async (req, res) => {
     try{
         const eventData = await Event.destroy({
@@ -36,4 +38,5 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 });
 
+// Exports the router instance
 module.exports = router;
