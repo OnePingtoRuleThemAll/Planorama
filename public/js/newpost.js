@@ -10,8 +10,9 @@ const newpostFormHandler = async (event) => {
    
    
     
-    if (title && body && event_date && eventLocation && locationCoordinates && isPrivate) {
-        const response = await fetch('/api/events', {
+  //  if (title && body && event_date && eventLocation && locationCoordinates && isPrivate) {
+       // const response = 
+       await fetch('/api/events', {
             method: 'POST',
             body: JSON.stringify({ title, body, event_date, eventLocation, locationCoordinates, isPrivate}),
             headers: {
@@ -19,13 +20,12 @@ const newpostFormHandler = async (event) => {
             }, 
         });
 
-        if (response.ok) {
-            document.location.replace('/profile');
-        } else {
-            alert('Failed to create event');
-        }
+     //  if (response.ok) {
+           document.location.replace('/profile');
+       // } else {
+       //     alert('Failed to create event');
+       // }
     }
-};
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
