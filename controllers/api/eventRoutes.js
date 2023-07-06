@@ -4,13 +4,14 @@ const { Event } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req,res) => {
+    const body = req.body;
     try{
         const newEvent = await Event.create({
-            ...req.body,
-            user_id: req.session.user_id,
+            ...body,
+            userId: req.session.userId,
         });
 
-        res.status(200).json(newEvent);
+        res.json(newEvent);
     } catch (err) { 
        res.status(400).json(err);
     }
