@@ -1,3 +1,4 @@
+// For future development, this button will add the event to the users profile
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -25,6 +26,7 @@ const newFormHandler = async (event) => {
     }
     };
 
+// Was working on my end but functionality stopped when it was merged with main
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
