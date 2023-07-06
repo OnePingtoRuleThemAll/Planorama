@@ -52,7 +52,7 @@ Event.init(
        // },
 
         date_created: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
